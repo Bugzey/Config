@@ -1,0 +1,94 @@
+# Far too custom mpv config
+# MPV configuration
+# 
+# General defaults listed in the beginning
+# Different VO options - default high-level and
+# a fast profile that consumes less power later
+
+
+# General and video playback
+cache-default = 8192
+cache = 30720
+video-sync=display-resample
+hwdec=vdpau
+cdrom-device=/dev/sr0
+dvd-device=/dev/sr0
+geometry=0:0
+#autofit-larger=100%x713
+autofit-larger=100%x1001
+force-window-position
+#force-window=no
+#fps=0
+screen=0
+profile=high
+
+
+# GUI / Terminal
+#term-status-msg="Time:  ${time-pos} / ${time-remaining:0s} / ${length:Unknown} (${percent-pos:100}%)${?pause==yes: (Paused)}${?mute==yes: 
+#(Muted)}\nSpeed: ${speed}x  |  Loop: ${loop}  |  Vol: ${volume} ${?paused-for-cache==yes:(Filling Cache) 
+#}${?demuxer-cache-idle==no:(Wait...)}"
+osc
+osd-level=1
+term-osd-bar
+sub-font-size=45
+
+# Audio
+audio-channels=2 
+ad-lavc-downmix=yes
+ad-lavc-threads=2
+volume-max=200
+volume=100
+alang=jpn,jp,Japanese,eng,en,English
+#af=rubberband=window=short
+af=scaletempo=stride=20:overlap=.80:search=20
+
+# Screenshots
+screenshot-template="~/Pictures/Screenshots/Videos/%F %P - %tY-%tm-%td" 
+screenshot-format=png
+screenshot-png-compression=7
+
+# Streaming
+ytdl
+#ytdl-format=22,best,298+141,298+140 # 302+171 webm+vorbis bugged – audio decoded externally
+ytdl-format=best,22,137+140,299+140
+
+# Subtitles
+slang=en,bg,de,cc_en,cc_bg
+sub-codepage=utf8:cp1251
+sub-auto = all
+
+# Economic video profile
+[fast]
+vo=gpu
+scale=bilinear
+dither-depth=no
+dscale=bilinear
+cscale=bilinear
+tscale=linear
+interpolation=no
+deband=no
+
+# High fidelity video profile
+[high]
+vo=gpu
+scale=ewa_robidouxsharp
+dither-depth=auto
+dscale=mitchell
+cscale=spline36
+interpolation
+#tscale=triangle
+tscale=linear
+tscale-clamp=1
+opengl-swapinterval=1
+temporal-dither
+scaler-resizes-only
+deband=yes
+
+# Webm
+[extension.webm]
+loop-file
+
+# GIF
+[extension.gif]
+loop-file
+

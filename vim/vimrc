@@ -1,0 +1,111 @@
+" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
+" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
+" you can find below.  If you wish to change any of those settings, you should
+" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
+" everytime an upgrade of the vim packages is performed.  It is recommended to
+" make changes after sourcing archlinux.vim since it alters the value of the
+" 'compatible' option.
+
+" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
+" Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
+" and configure vim to your own liking!
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages.
+runtime! archlinux.vim
+runtime! defaults.vim
+
+" do not load defaults if ~/.vimrc is missing
+let skip_defaults_vim=0
+
+
+" Custom options
+set sw=4
+set ts=4
+
+" Cyrilric normal mode mapping - custom keymap
+let b:keymap_name = "bds_de"
+loadkeymap
+q ,
+w у
+e е
+r и
+t ш
+z щ
+u к
+i с
+o д
+p з
+ü ц
++ ;
+a ь
+s я
+d а
+f о
+g ж
+h г
+j т
+k н
+l в
+ö м
+ä ч
+# „
+< ѝ
+y ю
+x й
+c ъ
+v э
+b ф
+n х
+m п
+, р
+. л
+- б
+Q ы
+W У
+E Е
+R И
+T Ш
+Z Щ
+U К
+I С
+O Д
+P З
+Ü Ц
++ ;
+A Ь
+S Я
+D А
+F О
+G Ж
+H Г
+J Т
+K Н
+L В
+Ö М
+Ä Ч
+# „
+< Ѝ
+Y Ю
+X Й
+C Ъ
+V Э
+B Ф
+N Х
+M П
+; Р
+: Л
+- Б
+\" ?
+§ +
+$ "
+% %
+& =
+\/ :
+( /
+) –
+\= №
+\? $
+` €
+ß -
+
