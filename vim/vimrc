@@ -20,8 +20,14 @@ let skip_defaults_vim=0
 
 
 " Custom options
-set sw=4
-set ts=4
+set shiftwidth=4
+set tabstop=4
+set smartindent
+set linebreak
+
+" Smartcase - case insensitive unless any letter is capital-case
+set ignorecase
+set smartcase
 
 " Cyrilric normal mode mapping - custom keymap
 let b:keymap_name = "bds_de"
@@ -49,8 +55,6 @@ k н
 l в
 ö м
 ä ч
-# „
-< ѝ
 y ю
 x й
 c ъ
@@ -73,7 +77,7 @@ O Д
 P З
 Ü Ц
 + ;
-A Ь
+A ѝ
 S Я
 D А
 F О
@@ -84,8 +88,6 @@ K Н
 L В
 Ö М
 Ä Ч
-# „
-< Ѝ
 Y Ю
 X Й
 C Ъ
@@ -95,17 +97,20 @@ N Х
 M П
 ; Р
 : Л
-- Б
+_ Б
+^ \(
+° \)
 \" ?
-§ +
+§ \+
 $ "
 % %
-& =
+& \=
 \/ :
 ( /
 ) –
 \= №
 \? $
+´ \.
 ` €
-ß -
+ß \-
 
