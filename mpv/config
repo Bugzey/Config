@@ -7,8 +7,8 @@
 
 
 # General and video playback
-cache-default = 8192
-cache = 30720
+cache = yes
+cache-secs=300
 video-sync=display-resample
 hwdec=vdpau
 cdrom-device=/dev/sr0
@@ -17,8 +17,6 @@ geometry=0:0
 #autofit-larger=100%x713
 autofit-larger=100%x1001
 force-window-position
-#force-window=no
-#fps=0
 screen=0
 profile=high
 
@@ -39,8 +37,7 @@ ad-lavc-threads=2
 volume-max=200
 volume=100
 alang=jpn,jp,Japanese,eng,en,English
-#af=rubberband=window=short
-af=scaletempo=stride=20:overlap=.80:search=20
+af=@rb:rubberband=window=short
 
 # Screenshots
 screenshot-template="~/Pictures/Screenshots/Videos/%F %P - %tY-%tm-%td" 
@@ -49,7 +46,6 @@ screenshot-png-compression=7
 
 # Streaming
 ytdl
-#ytdl-format=22,best,298+141,298+140 # 302+171 webm+vorbis bugged – audio decoded externally
 ytdl-format=best,22,137+140,299+140
 
 # Subtitles
@@ -60,6 +56,7 @@ sub-auto = all
 # Economic video profile
 [fast]
 vo=gpu
+hwdec=vaapi
 scale=bilinear
 dither-depth=no
 dscale=bilinear
@@ -71,13 +68,13 @@ deband=no
 # High fidelity video profile
 [high]
 vo=gpu
+hwdec=vaapi
 scale=ewa_robidouxsharp
 dither-depth=auto
 dscale=mitchell
 cscale=spline36
 interpolation
-#tscale=triangle
-tscale=linear
+tscale=oversample
 tscale-clamp=1
 opengl-swapinterval=1
 temporal-dither
@@ -91,4 +88,6 @@ loop-file
 # GIF
 [extension.gif]
 loop-file
+
+# Pitch shift
 
