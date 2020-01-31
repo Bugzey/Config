@@ -24,6 +24,7 @@ set shiftwidth=4
 set tabstop=4
 set smartindent
 set linebreak
+set isfname+=32
 
 " Smartcase - case insensitive unless any letter is capital-case
 set ignorecase
