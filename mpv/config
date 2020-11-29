@@ -7,8 +7,8 @@
 
 
 # General and video playback
-cache = yes
-cache-secs=300
+cache = auto
+demuxer-readahead-secs=300
 video-sync=display-resample
 hwdec=vdpau
 cdrom-device=/dev/sr0
