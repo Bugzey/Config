@@ -1,0 +1,16 @@
+# To use common configuration in %APPDATA%\mintty, simply remove this file
+Transparency=medium
+CursorType=block
+Font=Noto Sans Mono
+CtrlShiftShortcuts=yes
+CopyAsRTF=no
+Columns=210
+Rows=55
+ClicksPlaceCursor=yes
+ThemeFile=helmholtz.minttyrc
+FontSmoothing=full
+ForegroundColour=9,244,238
+BackgroundColour=0,0,0
+FontHeight=10
+FontWeight=400
+Term=xterm
