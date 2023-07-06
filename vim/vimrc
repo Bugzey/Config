@@ -59,6 +59,7 @@ set linebreak
 set isfname+=32
 set textwidth=100
 set number
+set colorcolumn=+1
 
 " Smartcase - case insensitive unless any letter is capital-case
 set ignorecase
