@@ -80,5 +80,11 @@ else
 fi
                                                         
 
-BROWSER=/usr/bin/xdg-open
+if [[ $WSL_DISTRO_NAME != "" ]]
+then
+	BROWSER=wslview
+else
+	BROWSER=/usr/bin/xdg-open
+fi
 
+PATH=$PATH:~/.local/bin

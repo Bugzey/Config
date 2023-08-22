@@ -18,6 +18,7 @@ runtime! defaults.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -31,6 +32,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'davidhalter/jedi-vim'
+Plugin 'dense-analysis/ale'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -47,6 +49,9 @@ Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Plugin settings
+let g:ale_linters = {'python': ['flake8']}
 
 " do not load defaults if ~/.vimrc is missing
 let skip_defaults_vim=0
