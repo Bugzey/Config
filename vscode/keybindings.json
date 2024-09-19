@@ -1,0 +1,27 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+t k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+t j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+t h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+t l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+    }
+]

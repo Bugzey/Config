@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "terminal.external.windowsExec": "bash",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "editor.rulers": [
+        100,
+    ],
+    "terminal.explorerKind": "external",
+    "flake8.importStrategy": "fromEnvironment"
+}

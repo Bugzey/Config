@@ -55,6 +55,8 @@ let g:ale_linters = {
 \	'python': ['flake8'],
 \	'markdown': [],
 \	'javascript': ['eslint'],
+\	'html': ['eslint'],
+\	'css': ['csslint'],
 \}
 
 " do not load defaults if ~/.vimrc is missing
