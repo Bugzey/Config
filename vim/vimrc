@@ -28,6 +28,8 @@ Plug 'davidhalter/jedi-vim'
 Plug 'dense-analysis/ale'
 Plug 'remihb/sparkup'
 " Plug 'rstacruz/sparkup'  " switch to this once https://github.com/rstacruz/sparkup/pull/142 merges
+Plug 'github/copilot.vim'
+Plug 'DanBradbury/copilot-chat.vim'
 
 call plug#end()
 
@@ -42,6 +44,12 @@ let g:ale_linters = {
 \	'css': ['csslint'],
 \}
 let g:ale_completion_enabled=1
+
+let g:copilot_filetypes = {
+\	'md': v:false,
+\	'markdown': v:false,
+\	'*CopilotChat*': v:false,
+\}
 
 " do not load defaults if ~/.vimrc is missing
 let skip_defaults_vim=0
