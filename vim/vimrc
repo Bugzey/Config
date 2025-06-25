@@ -28,8 +28,9 @@ Plug 'davidhalter/jedi-vim'
 Plug 'dense-analysis/ale'
 Plug 'remihb/sparkup'
 " Plug 'rstacruz/sparkup'  " switch to this once https://github.com/rstacruz/sparkup/pull/142 merges
-Plug 'github/copilot.vim'
-Plug 'DanBradbury/copilot-chat.vim'
+" Plug 'github/copilot.vim'
+" Plug 'DanBradbury/copilot-chat.vim'
+Plug 'gergap/vim-ollama'
 
 call plug#end()
 
