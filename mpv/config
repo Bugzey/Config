@@ -68,7 +68,8 @@ deband=no
 # High fidelity video profile
 [high]
 vo=gpu
-hwdec=vaapi
+# hwdec=vaapi
+hwdec=auto-safe
 scale=ewa_robidouxsharp
 dither-depth=auto
 dscale=mitchell
