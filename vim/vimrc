@@ -31,6 +31,7 @@ Plug 'remihb/sparkup'
 " Plug 'github/copilot.vim'
 " Plug 'DanBradbury/copilot-chat.vim'
 Plug 'gergap/vim-ollama'
+Plug 'wellle/context.vim'
 
 call plug#end()
 
@@ -42,7 +43,7 @@ let g:ale_linters = {
 \	'markdown': [],
 \	'javascript': ['eslint', "tsserver"],
 \	'html': ['eslint'],
-\	'css': ['csslint'],
+\	'css': ['eslint'],
 \}
 let g:ale_completion_enabled=1
 
@@ -51,6 +52,9 @@ let g:copilot_filetypes = {
 \	'markdown': v:false,
 \	'*CopilotChat*': v:false,
 \}
+
+" Context plugin
+let g:context_filetype_blacklist = ["markdown"]
 
 " do not load defaults if ~/.vimrc is missing
 let skip_defaults_vim=0
